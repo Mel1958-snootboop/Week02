@@ -1,1 +1,60 @@
-Hello! :3
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 2 Homework</title>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+
+        <div id="myApp"></div>
+
+        <script data-type="module" data-presets="react" type="text/babel">
+            "use strict";
+
+            import React from 'https://cdn.jsdelivr.net/npm/react@19.1.1/+esm';
+
+            import { createRoot } from 'https://cdn.jsdelivr.net/npm/react-dom@19.1.1/client/+esm';
+
+            function ProjectList(props){
+
+                return <div>
+                           <ol>
+                            {
+                                props.list.map(
+                                    (item,index) => (
+                                        <li key={index}>
+                                            <a href={item.link}>
+                                                {item.firstname}
+                                            </a>
+                                        </li>
+                                    )
+                                )
+                            }
+                           </ol>
+                       </div>;
+            }
+        
+             $.getJSON(
+              "x",
+              function(jsonFromJquery) {
+
+                console.log(jsonFromJquery);
+
+                const myElement = document.getElementById('myApp');
+
+                const myRoot = createRoot(myElement);
+
+                myRoot.render(
+                    <ProjectList list={jsonFromJquery} />
+                );
+            }
+
+        );
+        </script>
+
+    </body>
+</html>

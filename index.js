@@ -6,7 +6,7 @@ const requestListener = function( myrequest, myresponse ) {
         console.log( myrequest.url );
 
     
-        if ( myrequest.url === '/page1' ) {
+        if ( myrequest.url === '/' ) {
             fs.readFile(__dirname + "/page.html")
             .then(
                 contents => {
