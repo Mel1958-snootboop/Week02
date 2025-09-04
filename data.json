@@ -10,5 +10,13 @@
    {
        "firstname": "Martin",
        "link":"https://www.apple.com"
+   },
+   {
+       "firstname": "Marc",
+       "link":"https://www.github.com"
+   },
+   {
+       "firstname": "Max",
+       "link":"https://www.chrome.com"
    }
 ]
