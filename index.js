@@ -6,7 +6,7 @@ const requestListener = function( myreq, myresp ) {
         console.log( myreq.url );
 
     
-        if ( myrequest.url === '/' ) {
+        if ( myreq.url === '/' ) {
             fs.readFile(__dirname + "/page_1.html")
             .then(
                 contents => {
@@ -38,11 +38,11 @@ const requestListener = function( myreq, myresp ) {
     };
 
 
-let myserver = myhttp.createServer(
+let my_server = myhttp.createServer(
 
     requestListener
 );
 
 
 
-myserver.listen( 8080, "127.0.0.1" );
+my_server.listen( 8080, "127.0.0.1" );
