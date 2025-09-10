@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Week 2 Homework</title>
+        <title>Week 2 CS Homework</title>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    </head>
-    <body>
+     </head>
+     <body>
 
-        <div id="my_App"></div>
+     <div id="my_App"></div>
 
         <script data-type="module" data-presets="react" type="text/babel">
             "use strict";
@@ -21,22 +21,23 @@
 
             function ProjectList(props){
 
-                return <div>
-                           <ol>
-                            {
-                                props.list.map(
-                                    (item,index) => (
-                                        <li key={index}>
-                                            <a href={item.link}>
-                                                {item.first_name}
-                                            </a>
-                                        </li>
-                                    )
-                                )
-                            }
-                           </ol>
-                       </div>;
-            }
+         return <div>
+                <ol>
+                {
+                 props.list.map(
+                 (item,index) => (
+                 <li key={index}>
+                 <a href={item.link}>
+                 {item.first_name}
+                 </a>
+                 </li>
+                   )
+                  )
+                 }
+                </ol>
+                </div>;
+
+             }
         
              $.getJSON(
               ":O",
