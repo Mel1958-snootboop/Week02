@@ -2,19 +2,19 @@ const myhttp = require("http");
 
 const fs = require("fs").promises;
 
-const requestListener = function( myrequest, myresponse ) {
-        console.log( myrequest.url );
+const requestListener = function( myreq, myresp ) {
+        console.log( myreq.url );
 
     
         if ( myrequest.url === '/' ) {
-            fs.readFile(__dirname + "/page.html")
+            fs.readFile(__dirname + "/page_1.html")
             .then(
                 contents => {
-                    myresponse.setHeader("Content-Type", "text/html; charset=UTF-8;");
+                    myresp.setHeader("Content-Type", "text/html; charset=UTF-8;");
 
-                    myresponse.writeHead(200);
+                    myresp.writeHead(200);
 
-                    myresponse.end(contents);
+                    myresp.end(contents);
 
                 }
             );
@@ -23,11 +23,11 @@ const requestListener = function( myrequest, myresponse ) {
             fs.readFile(__dirname + "/data.json")
                 .then(
                     contents => {
-                    myresponse.setHeader("Content-Type", "application/json; charset=UTF-8;");
+                    myresp.setHeader("Content-Type", "application/json; charset=UTF-8;");
 
-                    myresponse.writeHead(200);
+                    myresp.writeHead(200);
 
-                    myresponse.end(contents);
+                    myresp.end(contents);
 
                 }
 
