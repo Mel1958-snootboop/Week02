@@ -20,7 +20,7 @@ const requestListener = function( myreq, myresp ) {
             );
         
         } else { 
-            fs.readFile(__dirname + "/data.json")
+            fs.readFile(__dirname + "/my_data.json")
                 .then(
                     contents => {
                     myresp.setHeader("Content-Type", "application/json; charset=UTF-8;");
