@@ -10,7 +10,7 @@
     </head>
     <body>
 
-        <div id="myApp"></div>
+        <div id="my_App"></div>
 
         <script data-type="module" data-presets="react" type="text/babel">
             "use strict";
@@ -28,7 +28,7 @@
                                     (item,index) => (
                                         <li key={index}>
                                             <a href={item.link}>
-                                                {item.firstname}
+                                                {item.first_name}
                                             </a>
                                         </li>
                                     )
@@ -44,7 +44,7 @@
 
                 console.log(jsonFromJquery);
 
-                const myElement = document.getElementById('myApp');
+                const myElement = document.getElementById('my_App');
 
                 const myRoot = createRoot(myElement);
 
